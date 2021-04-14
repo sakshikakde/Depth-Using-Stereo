@@ -34,10 +34,10 @@ def makeImageSizeSame(imgs):
 
     return images_resized
 
-def showMatches(image_1, image_2, matched_pairs, color, file_name):
+def showMatches(img_1, img_2, matched_pairs, color, file_name):
 
-    # image_1 = img_1
-    # image_2 = img_2
+    image_1 = img_1.copy()
+    image_2 = img_2.copy()
 
     image_1, image_2 = makeImageSizeSame([image_1, image_2])
     concat = np.concatenate((image_1, image_2), axis = 1)
