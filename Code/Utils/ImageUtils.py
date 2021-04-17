@@ -2,6 +2,7 @@
 import cv2
 import numpy as np
 
+
 def readImageSet(folder_name, n_images):
     print("Reading images from ", folder_name)
     images = []
