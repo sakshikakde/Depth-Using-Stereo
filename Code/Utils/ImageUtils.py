@@ -58,3 +58,11 @@ def showMatches(img_1, img_2, matched_pairs, color, file_name):
         cv2.destroyAllWindows()
         cv2.imwrite(file_name, concat)
     
+
+
+def displaySaveImage(image, file_name =  None):
+    cv2.imshow("image", image)
+    cv2.waitKey()
+    if file_name is not None:
+        cv2.imwrite(file_name, image)
+    cv2.destroyAllWindows()
