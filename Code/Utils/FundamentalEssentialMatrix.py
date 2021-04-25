@@ -1,5 +1,7 @@
 import numpy as np
 
+# code referred from https://github.com/sakshikakde/Buildings-built-in-minutes-An-SfM-Approach
+
 def normalize(uv):
 
     uv_dash = np.mean(uv, axis=0)
