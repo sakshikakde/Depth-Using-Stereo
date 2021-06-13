@@ -1,3 +1,5 @@
+# Depth estimation using Stereo Cameras
+
 ## How to run the code
 1) Change the directory where the stereo.py file is located. Eg:      
             cd /home/sakshi/courses/ENPM673/project3_sakshi/Code  
