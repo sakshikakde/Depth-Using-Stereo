@@ -25,15 +25,26 @@ onto a common plane parallel to the line between camera centers.
 For every pixel in image 1, we try to find a corresponding match along the epipolar line in image 2. We will consider a
 window of a predefined size for this purpose, so this method is called block matching. Essentially, we will be taking a small
 region of pixels in the left image, and searching for the closest
-matching region of pixels in the right. FOllowing methods can be used for 
+matching region of pixels in the right. Following methods can be used for 
 block comparison:
 1) Sum of Absolute Differences (SAD)
 2) Sum of Squared Differences (SSD)
 3) Normalized Cross-Correlation (NCC)
 ### Depth computation
 ### 1. Disparity Map
-### 2. Depth Map
+After we get the matching pixel location, the disparity can
+be found bu take the absolute of the difference between the
+source and matched pixel location         
 
+![alt-text-1](https://github.com/sakshikakde/Depth-Using-Stereo/blob/main/git_images/disparity_image_gray1.png)
+![alt-text-1](https://github.com/sakshikakde/Depth-Using-Stereo/blob/main/git_images/disparity_image_gray2.png)
+![alt-text-1](https://github.com/sakshikakde/Depth-Using-Stereo/blob/main/git_images/disparity_image_gray3.png)
+### 2. Depth Map
+If we know the focal length(f) and basline(b), the depth can
+be calculated.
+![alt-text-1](https://github.com/sakshikakde/Depth-Using-Stereo/blob/main/git_images/depth_image1.png)
+![alt-text-1](https://github.com/sakshikakde/Depth-Using-Stereo/blob/main/git_images/depth_image2.png)
+![alt-text-1](https://github.com/sakshikakde/Depth-Using-Stereo/blob/main/git_images/depth_image3.png)
 ## How to run the code
 1) Change the directory where the stereo.py file is located. Eg:      
             cd /home/sakshi/courses/ENPM673/project3_sakshi/Code  
