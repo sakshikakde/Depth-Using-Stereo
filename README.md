@@ -3,12 +3,12 @@
 ### CALIBRATION
 #### 1. Feature Detection and Matching
 The result are obtained using Brute-Force matcher in OpenCV. It can be seen that there are a few wrong matches obtained. These can
-terribly affect the results. To filter these wrong feature pairs, we will use RANSAC in the next step.
+terribly affect the results. To filter these wrong feature pairs, we will use RANSAC in the next step.     
 ![alt text](https://github.com/sakshikakde/Depth-Using-Stereo/blob/main/git_images/Screenshot%20from%202021-07-25%2013-07-55.png)
 #### 2. Estimation of Fundamental Matrix and RANSAC
 The fundamental matrix is calculated using the 8-point algorithm. If the F matrix estimation is good, then terms
 x T 2 .F.x 1 should be close to 0, where x 1 and x 2 are features from image1 and image2. Using this criteria, RANSAC can
-be used to filter the outliers.
+be used to filter the outliers.    
 ![alt text](https://github.com/sakshikakde/Depth-Using-Stereo/blob/main/git_images/Screenshot%20from%202021-07-25%2013-08-01.png)
 #### 3. Estimation of Essential Matrix
 Since we know the camera caliberation matrix, we can use it to obtain the essential matrix.
@@ -19,7 +19,7 @@ the pose for camera 2 with respect to camera 1 which is assumed to be at world o
 ### RECTIFICATION
 Using the fundamental matrix and the feature points, we can obtain the epipolar lines for both the images. The
 epipolar lines need to be parallel for further computations to obtain depth. This can be done by reprojecting image planes
-onto a common plane parallel to the line between camera centers.
+onto a common plane parallel to the line between camera centers.       
 ![alt text](https://github.com/sakshikakde/Depth-Using-Stereo/blob/main/git_images/Screenshot%20from%202021-07-25%2013-17-26.png)
 ### CORRESPONDENCE
 For every pixel in image 1, we try to find a corresponding match along the epipolar line in image 2. We will consider a
